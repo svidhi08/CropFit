@@ -13,3 +13,18 @@
 .externalNativeBuild
 .cxx
 local.properties
+# --- CONFIDENTIALITY & SECURITY ---
+# Firebase configuration (Hide your backend keys)
+app/google-services.json
+
+# Release signing files
+*.jks
+*.keystore
+
+# Local environment variables and secrets
+local.properties
+secrets.properties
+
+# Machine learning model caches (if any)
+*.tflite.log
+*.tflite.bin
