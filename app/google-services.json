@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "874139125226",
+    "project_id": "cropfit-5d547",
+    "storage_bucket": "cropfit-5d547.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874139125226:android:7f7cbb30e356e8cde51e93",
+        "android_client_info": {
+          "package_name": "com.example.cropfit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8fXVs7Z4sFM8I_mmBhCymHu95HwBTslA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

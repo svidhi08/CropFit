@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_nature_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="80dp"> <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soil &amp; Climate Analysis"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/glass_white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nitrogen (N)" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvNValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="0" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                    </RelativeLayout>
+                    <SeekBar android:id="@+id/sbN" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:max="140" android:thumb="@drawable/thumb_custom" android:progressTint="@color/primary_green"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/glass_white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phosphorus (P)" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvPValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="0" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                    </RelativeLayout>
+                    <SeekBar android:id="@+id/sbP" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:max="145" android:thumb="@drawable/thumb_custom" android:progressTint="@color/primary_green"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/glass_white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Potassium (K)" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvKValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="0" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                    </RelativeLayout>
+                    <SeekBar android:id="@+id/sbK" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:max="205" android:thumb="@drawable/thumb_custom" android:progressTint="@color/primary_green"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/glass_white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Temperature (°C)" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvTempValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="0" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                    </RelativeLayout>
+                    <SeekBar android:id="@+id/sbTemp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:max="50" android:thumb="@drawable/thumb_custom" android:progressTint="@color/primary_green"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/glass_white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Humidity (%)" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvHumValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="0" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                    </RelativeLayout>
+                    <SeekBar android:id="@+id/sbHum" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:max="100" android:thumb="@drawable/thumb_custom" android:progressTint="@color/primary_green"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/glass_white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Soil pH (0–14)" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvPHValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="0" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                    </RelativeLayout>
+                    <SeekBar android:id="@+id/sbPH" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:max="140" android:thumb="@drawable/thumb_custom" android:progressTint="@color/primary_green"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" app:cardCornerRadius="20dp" app:cardBackgroundColor="@color/glass_white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rainfall (mm)" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvRainValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="0" android:textColor="@color/primary_green" android:textStyle="bold"/>
+                    </RelativeLayout>
+                    <SeekBar android:id="@+id/sbRain" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:max="300" android:thumb="@drawable/thumb_custom" android:progressTint="@color/primary_green"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPredict"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="24dp"
+                android:text="GENERATE RECOMMENDATION"
+                android:textSize="16sp"
+                android:backgroundTint="@color/primary_green"
+                app:cornerRadius="16dp"
+                app:elevation="8dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
