@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.example.cropfit.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
-    private ActivityLoginBinding binding; // Using View Binding
+    private ActivityLoginBinding binding;
     private FirebaseAuth mAuth;
 
     @Override
@@ -42,7 +44,19 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(new Intent(this, MainActivity.class));
                         finish();
                     } else {
-                        Toast.makeText(this, "Error: User doesn't exist. Please Sign Up.", Toast.LENGTH_LONG).show();
+                        // FIX: Detect the specific error instead of hardcoding "User doesn't exist"
+                        String errorMsg;
+                        try {
+                            throw task.getException();
+                        } catch (FirebaseAuthInvalidUserException e) {
+                            errorMsg = "Account does not exist. Please Sign Up.";
+                        } catch (FirebaseAuthInvalidCredentialsException e) {
+                            errorMsg = "Invalid email or password.";
+                        } catch (Exception e) {
+                            // This catches the "Network Error" or "Timeout" you experienced
+                            errorMsg = "Connection Error: Check your internet and try again.";
+                        }
+                        Toast.makeText(this, errorMsg, Toast.LENGTH_LONG).show();
                     }
                 });
     }

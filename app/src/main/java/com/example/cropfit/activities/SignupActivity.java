@@ -42,12 +42,17 @@ public class SignupActivity extends AppCompatActivity {
                 String uid = mAuth.getCurrentUser().getUid();
                 User user = new User(name, email, uid);
 
-                db.collection("Users").document(uid).set(user).addOnSuccessListener(aVoid -> {
-                    startActivity(new Intent(this, MainActivity.class));
-                    finish();
-                });
+                db.collection("Users").document(uid).set(user)
+                        .addOnSuccessListener(aVoid -> {
+                            startActivity(new Intent(this, MainActivity.class));
+                            finish();
+                        })
+                        .addOnFailureListener(e -> {
+                            Toast.makeText(this, "Profile Creation Failed: Check Internet", Toast.LENGTH_SHORT).show();
+                        });
             } else {
-                Toast.makeText(this, "Registration Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                // Shows the real reason (e.g., "Email already in use" or "Network Timeout")
+                Toast.makeText(this, "Error: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }
