@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (id == R.id.nav_history) {
                 selectedFragment = new HistoryFragment();
             } else if (id == R.id.nav_profile) {
-                // Ensure your fragment class is named UserFragment
-                selectedFragment = new UserFragment();
+                 selectedFragment = new UserFragment();
             }
 
             return loadFragment(selectedFragment);
@@ -59,9 +58,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * Replaces the content of the fragment_container with the selected fragment
-     */
+
+//     Replaces the content of the fragment_container with the selected fragment
     private boolean loadFragment(Fragment fragment) {
         if (fragment != null) {
             getSupportFragmentManager()

@@ -36,7 +36,13 @@
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nitrogen (N)" android:textColor="@color/primary_green" android:textStyle="bold"/>
                         <TextView android:id="@+id/tvNValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="0" android:textColor="@color/primary_green" android:textStyle="bold"/>
                     </RelativeLayout>
-                    <SeekBar android:id="@+id/sbN" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:max="140" android:thumb="@drawable/thumb_custom" android:progressTint="@color/primary_green"/>
+                    <SeekBar android:id="@+id/sbN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:max="140"
+                        android:thumb="@drawable/thumb_custom"
+                        android:progressTint="@color/primary_green"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

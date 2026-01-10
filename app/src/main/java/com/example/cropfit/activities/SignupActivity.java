@@ -11,6 +11,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class SignupActivity extends AppCompatActivity {
     private ActivitySignupBinding binding;
+//    You never directly call Firebase server APIs.The SDK is the bridge.
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
 
@@ -38,7 +39,7 @@ public class SignupActivity extends AppCompatActivity {
 
     private void registerUser(String name, String email, String password) {
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
+            if (task.isSuccessful()) {//If correct, Firebase generates a user session and a token (ID token).
                 String uid = mAuth.getCurrentUser().getUid();
                 User user = new User(name, email, uid);
 

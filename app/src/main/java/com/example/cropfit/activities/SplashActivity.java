@@ -7,6 +7,8 @@ import android.os.Looper;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cropfit.R;
@@ -18,8 +20,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        // Optional: Simple fade-in animation for the logo
-        View logo = findViewById(R.id.splashLogo);
+        ImageView logo = findViewById(R.id.splashLogo);
         Animation fadeIn = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
         fadeIn.setDuration(1500);
         logo.startAnimation(fadeIn);
@@ -31,8 +32,6 @@ public class SplashActivity extends AppCompatActivity {
                 // Move to Login Activity
                 Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(intent);
-
-                // Close SplashActivity so user can't go back to it
                 finish();
             }
         }, 5000);

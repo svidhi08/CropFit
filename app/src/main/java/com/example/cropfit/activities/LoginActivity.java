@@ -44,7 +44,6 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(new Intent(this, MainActivity.class));
                         finish();
                     } else {
-                        // FIX: Detect the specific error instead of hardcoding "User doesn't exist"
                         String errorMsg;
                         try {
                             throw task.getException();
